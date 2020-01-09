@@ -30,12 +30,12 @@ to play again, if the answer is yes the game start again, otherwise the game end
         - https://gorails.com/setup/windows/10
     - rvm
         - https://rvm.io/
- - Ruby in 100 Minutes
- - MicroBlogger: Jumpstart Lab Curriculum
- - Groom your app’s Ruby environment with rbenv
- - ruby-build
- - RubyCritic
- - HackerRank Ruby
- - Code Academy Learn Ruby
- - Learn Ruby with Edgecase Ruby Koans
- - Why's (Poignant) Guide to Ruby 
+ - [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html)
+ - [MicroBlogger: Jumpstart Lab Curriculum](http://tutorials.jumpstartlab.com/projects/microblogger.html)
+ - [Groom your app’s Ruby environment with rbenv](https://github.com/rbenv/rbenv#understanding-shims)
+ - [ruby-build](https://github.com/rbenv/ruby-build#readme)
+ - [RubyCritic](https://github.com/whitesmith/rubycritic)
+ - [HackerRank Ruby](https://www.hackerrank.com/domains/ruby?filters%5Bsubdomains%5D%5B%5D=ruby-tutorials)
+ - [Code Academy Learn Ruby](https://www.codecademy.com/learn/learn-ruby)
+ - [Learn Ruby with Edgecase Ruby Koans](http://rubykoans.com/)
+ - [Why's (Poignant) Guide to Ruby](https://poignant.guide/) 
