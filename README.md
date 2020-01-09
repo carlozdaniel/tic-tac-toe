@@ -23,13 +23,13 @@ until there is a winner or a draw. When any of these conditions are reached disp
 to play again, if the answer is yes the game start again, otherwise the game ends.
 
 ## Resources
-- Instalación de Ruby 
+- Install Ruby
     - rbenv
         - [Groom your app’s Ruby environment with rbenv](https://github.com/rbenv/rbenv)
-        - https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-16-04
-        - https://gorails.com/setup/windows/10
+        - [How to install ruby on rails with rbenv on ubuntu 16-04](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-16-04)
+        - [Install Ruby on Rays on Windows 10](https://gorails.com/setup/windows/10)
     - rvm
-        - https://rvm.io/
+        - [rvm.io](https://rvm.io/)
  - [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html)
  - [MicroBlogger: Jumpstart Lab Curriculum](http://tutorials.jumpstartlab.com/projects/microblogger.html)
  - [ruby-build](https://github.com/rbenv/ruby-build#readme)
