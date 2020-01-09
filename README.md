@@ -25,7 +25,7 @@ to play again, if the answer is yes the game start again, otherwise the game end
 ## Resources
 - Instalación de Ruby 
     - rbenv
-        -  - [Groom your app’s Ruby environment with rbenv](https://github.com/rbenv/rbenv)
+        - [Groom your app’s Ruby environment with rbenv](https://github.com/rbenv/rbenv)
         - https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-16-04
         - https://gorails.com/setup/windows/10
     - rvm
