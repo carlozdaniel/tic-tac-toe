@@ -25,14 +25,13 @@ to play again, if the answer is yes the game start again, otherwise the game end
 ## Resources
 - Instalación de Ruby 
     - rbenv
-        - https://github.com/rbenv/rbenv
+        -  - [Groom your app’s Ruby environment with rbenv](https://github.com/rbenv/rbenv)
         - https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-16-04
         - https://gorails.com/setup/windows/10
     - rvm
         - https://rvm.io/
  - [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html)
  - [MicroBlogger: Jumpstart Lab Curriculum](http://tutorials.jumpstartlab.com/projects/microblogger.html)
- - [Groom your app’s Ruby environment with rbenv](https://github.com/rbenv/rbenv#understanding-shims)
  - [ruby-build](https://github.com/rbenv/ruby-build#readme)
  - [RubyCritic](https://github.com/whitesmith/rubycritic)
  - [HackerRank Ruby](https://www.hackerrank.com/domains/ruby?filters%5Bsubdomains%5D%5B%5D=ruby-tutorials)
