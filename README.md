@@ -1,9 +1,5 @@
 # The Ruby Challenge: Tic Tac Toe
 
-To complete this challenge you are required to fulfill the following 3 tasks
-
-# 1 Tic Tac Toe
-
 ## Objective
 
 In order to practice what we have learned regarding OOP and best practices, let's implement a Tic-Tac-Toe (Gato in Spanish) game!
@@ -25,3 +21,21 @@ In order to practice what we have learned regarding OOP and best practices, let'
 The game start ask you for the board size, after that the game ask the cell position to the player in turn, and that step is repeat
 until there is a winner or a draw. When any of these conditions are reached display a message and after that the game ask if they want
 to play again, if the answer is yes the game start again, otherwise the game ends.
+
+## Resources
+- Instalación de Ruby 
+ - rbenv
+  - https://github.com/rbenv/rbenv
+  - https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-16-04
+  - https://gorails.com/setup/windows/10
+ - rvm
+  - https://rvm.io/
+ - Ruby in 100 Minutes
+ - MicroBlogger: Jumpstart Lab Curriculum
+ - Groom your app’s Ruby environment with rbenv
+ - ruby-build
+ - RubyCritic
+ - HackerRank Ruby
+ - Code Academy Learn Ruby
+ - Learn Ruby with Edgecase Ruby Koans
+ - Why's (Poignant) Guide to Ruby 
