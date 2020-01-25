@@ -44,7 +44,6 @@ class Gato
   end 
 
   def jugador_o
-    # o = gets.chomp
     print "1 dato de la cordenada"
     f=gets.chomp.to_i
     print "2 dato de la cordenada"
@@ -57,15 +56,16 @@ class Gato
   end  
 
   def valida_fila()
-   # if los datos de la primera cordenada coisiden == win 
     @dato.times do |x|
       fila = []
       @dato.times do |c|
         fila << @tablero[x][c]
-        #uniq.length
+
       end
       if fila.uniq.length == 1
-        puts "winner"
+        puts "winner linea"
+        puts "preciona Ctrl + c para salir"
+        gets
         return
       end
     end
@@ -73,38 +73,57 @@ class Gato
   end
 
   def valida_columna()
-    #   #if el 2do valor de la cordenada coiside == win 
-        @dato.times do |c|
-          fila = []
+    @dato.times do |c|
+      fila = []
           @dato.times do |x|
             fila << @tablero[x][c]
             #uniq.length
           end
-          if fila.uniq.length == 1
-            puts "winner columna"
-            return
-          end
-        end
+      if fila.uniq.length == 1
+        puts "winner columna"
+        puts "preciona Ctrl + c para salir"
+       return  
+      end
+    end
     false
-      end 
- 
-
-  def diagonal
-    # @dato.time do
-    #   y = @dato -1
-    #   @tablero[x][y]
-    #   x+=
-    # end
-    # if si los datos coisiden win 
   end
+
   def diagonal_invertida
-  #si las cordenadas tienen el mismo valor entre si(4 datos coisiden) == win
+      diagonal_invertida = []
+      @dato.times do |c|
+      diagonal_invertida << @tablero[c][c]     
+    end
+        if diagonal_invertida.uniq.length == 1
+          puts "winner diagonal invertida"
+          puts "preciona Ctrl + c para salir"
+          gets
+          return
+        end 
+        
+    end
+
+    
+    def diagonal 
+      dato_menos_1 = @dato - 1
+  suma = [] 
+      @dato.times do |x|
+        
+            @dato.times do |c|
+              if (x+c) == dato_menos_1
+               suma << @tablero[x][c]
+              end          
+     end
+
+   end
+   if suma.uniq.length == 1
+    puts "winner diagonal"
+    puts "preciona Ctrl + c para salir"
+    gets
+    
+  end 
 
   end
-
-end
-
-
+  end
 
 tablero = Gato.new()
 tablero.mensaje
@@ -115,17 +134,24 @@ tablero.imprimir_tablero
 $total_de_posiciones.times do |i|
     
   if (i % 2) == 0
+      puts "jugador O"
       tablero.jugador_o
       tablero.imprimir_tablero
       tablero.valida_fila
       tablero.valida_columna
+      tablero.diagonal_invertida
+      tablero.diagonal
+      
     else
+      puts "jugador X"
       tablero.jugador_x
       tablero.imprimir_tablero
       tablero.valida_fila
       tablero.valida_columna
+      tablero.diagonal_invertida
+      tablero.diagonal
   end
-    
+  
 end
-
+puts "enpate"
 
