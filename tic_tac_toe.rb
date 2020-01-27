@@ -1,30 +1,30 @@
 
-class Gato
+class Gato 
     
-  def mensaje()
-    print 'dame el tamano del tablero: '
-    dato = gets.chomp
-    @dato = dato.to_i 
-    $total_de_posiciones = @dato * @dato.to_i
-    puts "tu tablero sera de #{@dato} X #{@dato}"
-    @tablero = []
+  def welcome_message()
+    print 'dame el tamano del board: '
+    board_size = gets.chomp
+    @board_size = board_size.to_i 
+    $total_positions = @board_size * @board_size.to_i
+    puts "tu board sera de #{@board_size} X #{@board_size}"
+    @board = []
     Array.new
   end
    
-  def llenar_tablero()
+  def Insert_data_into_dashboard()
     c = 1
-    @dato.times do
+    @board_size.times do
       @column = []
-      @dato.times do   
+      @board_size.times do   
         @column.push c
         c += 1
       end
-      @tablero.push @column
+      @board.push @column
     end
   end
 
-  def imprimir_tablero()
-    @tablero.each do |column|
+  def print_board()
+    @board.each do |column|
       column.each do |card|
         print card
     
@@ -35,35 +35,32 @@ class Gato
    end 
   end
   
-  def jugador_x()
+  def player_x()
     print "1 dato de la cordenada"
     f=gets.chomp.to_i
     print "2 dato de la cordenada"
     c=gets.chomp.to_i
-    @tablero[f][c] ="x"    
+    @board[f][c] ="x"    
   end 
 
-  def jugador_o
+  def player_o
     print "1 dato de la cordenada"
     f=gets.chomp.to_i
     print "2 dato de la cordenada"
     c=gets.chomp.to_i
-    @tablero[f][c] = "o"   
+    @board[f][c] = "o"   
   end
+ 
 
-  def podicion_a_cambiar
-    $podicion_a_cambiar = gets.chomp.to_i
-  end  
-
-  def valida_fila()
-    @dato.times do |x|
-      fila = []
-      @dato.times do |c|
-        fila << @tablero[x][c]
+  def validate_row()
+    @board_size.times do |x|
+      row = []
+      @board_size.times do |c|
+        row << @board[x][c]
 
       end
-      if fila.uniq.length == 1
-        puts "winner linea"
+      if row.uniq.length == 1
+        puts "ganador en linea"
         puts "preciona Ctrl + c para salir"
         gets
         return
@@ -72,15 +69,15 @@ class Gato
   false
   end
 
-  def valida_columna()
-    @dato.times do |c|
-      fila = []
-          @dato.times do |x|
-            fila << @tablero[x][c]
+  def validate_column()
+    @board_size.times do |c|
+      row = []
+          @board_size.times do |x|
+            row << @board[x][c]
             #uniq.length
           end
-      if fila.uniq.length == 1
-        puts "winner columna"
+      if row.uniq.length == 1
+        puts "ganador en columna"
         puts "preciona Ctrl + c para salir"
        return  
       end
@@ -88,13 +85,13 @@ class Gato
     false
   end
 
-  def diagonal_invertida
-      diagonal_invertida = []
-      @dato.times do |c|
-      diagonal_invertida << @tablero[c][c]     
+  def diagonal_inverted
+      diagonal_inverted = []
+      @board_size.times do |c|
+      diagonal_inverted << @board[c][c]     
     end
-        if diagonal_invertida.uniq.length == 1
-          puts "winner diagonal invertida"
+        if diagonal_inverted.uniq.length == 1
+          puts "ganador en diagonal invertida"
           puts "preciona Ctrl + c para salir"
           gets
           return
@@ -104,19 +101,19 @@ class Gato
 
     
     def diagonal 
-      dato_menos_1 = @dato - 1
-  suma = [] 
-      @dato.times do |x|
+      board_size_menos_1 = @board_size - 1
+  sum = [] 
+      @board_size.times do |x|
         
-            @dato.times do |c|
-              if (x+c) == dato_menos_1
-               suma << @tablero[x][c]
+            @board_size.times do |c|
+              if (x+c) == board_size_menos_1
+               sum << @board[x][c]
               end          
      end
 
    end
-   if suma.uniq.length == 1
-    puts "winner diagonal"
+   if sum.uniq.length == 1
+    puts "ganador en diagonal"
     puts "preciona Ctrl + c para salir"
     gets
     
@@ -125,31 +122,31 @@ class Gato
   end
   end
 
-tablero = Gato.new()
-tablero.mensaje
-tablero.llenar_tablero
-tablero.imprimir_tablero
+board = Gato.new()
+board.welcome_message
+board.Insert_data_into_dashboard
+board.print_board
 
 
-$total_de_posiciones.times do |i|
+$total_positions.times do |i|
     
   if (i % 2) == 0
       puts "jugador O"
-      tablero.jugador_o
-      tablero.imprimir_tablero
-      tablero.valida_fila
-      tablero.valida_columna
-      tablero.diagonal_invertida
-      tablero.diagonal
+      board.player_o
+      board.print_board
+      board.validate_row
+      board.validate_column
+      board.diagonal_inverted
+      board.diagonal
       
     else
       puts "jugador X"
-      tablero.jugador_x
-      tablero.imprimir_tablero
-      tablero.valida_fila
-      tablero.valida_columna
-      tablero.diagonal_invertida
-      tablero.diagonal
+      board.player_x
+      board.print_board
+      board.validate_row
+      board.validate_column
+      board.diagonal_inverted
+      board.diagonal
   end
   
 end
