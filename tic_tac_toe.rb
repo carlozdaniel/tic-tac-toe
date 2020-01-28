@@ -63,7 +63,7 @@ class Gato
         puts "ganador en linea"
         puts "preciona Ctrl + c para salir"
         gets
-        return
+        return   
       end
     end
   false
