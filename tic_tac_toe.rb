@@ -61,7 +61,7 @@ class Gato
       end
       if row.uniq.length == 1
         puts "ganador en linea"
-        puts "preciona Ctrl + c para salir"
+       exit
         gets
         return   
       end
@@ -78,7 +78,7 @@ class Gato
           end
       if row.uniq.length == 1
         puts "ganador en columna"
-        puts "preciona Ctrl + c para salir"
+       exit
        return  
       end
     end
@@ -92,7 +92,7 @@ class Gato
     end
         if diagonal_inverted.uniq.length == 1
           puts "ganador en diagonal invertida"
-          puts "preciona Ctrl + c para salir"
+         exit
           gets
           return
         end 
@@ -114,7 +114,7 @@ class Gato
    end
    if sum.uniq.length == 1
     puts "ganador en diagonal"
-    puts "preciona Ctrl + c para salir"
+   exit
     gets
     
   end 
